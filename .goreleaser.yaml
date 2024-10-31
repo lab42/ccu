@@ -87,3 +87,29 @@ docker_manifests:
       - ghcr.io/lab42/{{.ProjectName}}:latest-arm64v8
       - ghcr.io/lab42/{{.ProjectName}}:latest-armv6
       - ghcr.io/lab42/{{.ProjectName}}:latest-armv7
+# SBOM
+sboms:
+  - artifacts: archive
+# Signing
+binary_signs:
+  - cmd: cosign
+    stdin: ""
+    args:
+      - "sign-blob"
+      - "--key=cosign.key"
+      - "--output-signature=${signature}"
+      - "${artifact}"
+      - "--yes"
+signs:
+  - cmd: cosign
+    stdin: ""
+    args:
+      - "sign-blob"
+      - "--key=cosign.key"
+      - "--output-signature=${signature}"
+      - "${artifact}"
+      - "--yes"
+    artifacts: all
+docker_signs:
+  - artifacts: all
+    stdin: ""
