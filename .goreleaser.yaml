@@ -91,15 +91,6 @@ docker_manifests:
 sboms:
   - artifacts: archive
 # Signing
-binary_signs:
-  - cmd: cosign
-    stdin: ""
-    args:
-      - "sign-blob"
-      - "--key=cosign.key"
-      - "--output-signature=${signature}"
-      - "${artifact}"
-      - "--yes"
 signs:
   - cmd: cosign
     stdin: ""
