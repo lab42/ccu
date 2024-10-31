@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  pull_request:
+    types: 
+      - opened           
+      - reopened        
+      - synchronize     
+      - ready_for_review
+
+jobs:
+  validate-go-releaser:
+    name: Validate GoReleaser configuration
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "[Checkout] repository"
+        uses: actions/checkout@v4
+
+      - name: "[CI] Run GoReleaser"
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          args: check
+
+  validate-pr-title:
+    name: Validate PR title
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "[Checkout] repository"
+        uses: actions/checkout@v4
+
+      - name: "[Setup] Install ccu"
+        run: curl -fsSL https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
+
+      - name: "[CI] Check PR Title"
+        env:
+          CCU_INPUT: ${{ github.event.pull_request.title }}
+        run: ccu
+
+  dockerfile-lint:
+    name: Validate Dockerfile
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "[Checkout] repository"
+        uses: actions/checkout@v4
+
+      - name: "[CI] Lint Dockerfile"
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: Dockerfile
+          format: tty
+          failure-threshold: error
