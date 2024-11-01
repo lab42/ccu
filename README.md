@@ -9,13 +9,13 @@ You can install `ccu` by downloading and running the `install.sh` script hosted 
 ### Install with `curl`
 
 ```sh
-curl -fsSL https://github.com/lab42/ccu/raw/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
 ```
 
 ### Install with `wget`
 
 ```sh
-wget -qO- https://github.com/lab42/ccu/raw/main/install.sh | sh
+wget -qO- https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
 ```
 
 The installation script automatically detects your OS and architecture, downloads the latest release of `ccu`, and places it in `/usr/local/bin`.
@@ -98,7 +98,7 @@ ccu
 To integrate `ccu` with GitHub Actions, add a step in your workflow that validates the latest commit message. Here's an example workflow configuration:
 
 ```yaml
-name: Commit Guard
+name: ccu
 
 on:
   push:
@@ -116,7 +116,7 @@ jobs:
 
       - name: Install ccu
         run: |
-          curl -fsSL https://github.com/lab42/ccu/raw/main/install.sh | sh
+          curl -fsSL https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
 
       - name: Run ccu
         env:

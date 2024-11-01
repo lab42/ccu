@@ -23,15 +23,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: "[Setup] Install Go"
+      - name: "[Setup] Go"
         uses: actions/setup-go@v5
         with:
           go-version: stable
 
-      - name: "[Setup] Install svu"
+      - name: "[Setup] svu"
         run: go install github.com/caarlos0/svu@latest
 
-      - name: "[CD] Tag release"
+      - name: "[CD] release"
         if: github.ref == 'refs/heads/main'
         run: |
           git fetch --tags --force
@@ -49,13 +49,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: "[Setup] Install Go"
+      - name: "[Setup] Go"
         uses: actions/setup-go@v5
         with:
           go-version: stable
-
-      - name: "[Setup] Install UPX"
-        run: sudo apt-get install -y upx
 
       - name: "[Setup] qemu"
         uses: docker/setup-qemu-action@v3

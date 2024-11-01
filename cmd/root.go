@@ -10,22 +10,6 @@ import (
 	"github.com/spf13/viper"
 )
 
-const (
-	keyType    = "type"
-	keyTopic   = "topic"
-	keyMessage = "message"
-	keyInput   = "input"
-
-	defaultTemplate = `^(%s)%s:%s`
-	defaultType     = `build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test`
-	defaultTopic    = `(\([a-zA-Z0-9\-\.]+\))?(!)?`
-	defaultMessage  = `.*`
-)
-
-var (
-	cfgFile string
-)
-
 var rootCmd = &cobra.Command{
 	Use:   "ccu",
 	Short: "Validates commit messages against conventional commit format",

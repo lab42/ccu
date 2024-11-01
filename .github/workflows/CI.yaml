@@ -17,23 +17,23 @@ jobs:
       - name: "[Checkout] repository"
         uses: actions/checkout@v4
 
-      - name: "[CI] Run GoReleaser"
+      - name: "[CI] GoReleaser"
         uses: goreleaser/goreleaser-action@v6
         with:
           args: check
 
-  validate-pr-title:
-    name: Validate PR title
+  validate-title:
+    name: Validate title
     runs-on: ubuntu-latest
 
     steps:
       - name: "[Checkout] repository"
         uses: actions/checkout@v4
 
-      - name: "[Setup] Install ccu"
+      - name: "[Setup] ccu"
         run: curl -fsSL https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
 
-      - name: "[CI] Check PR Title"
+      - name: "[CI] ValidateTitle"
         env:
           CCU_INPUT: ${{ github.event.pull_request.title }}
         run: ccu

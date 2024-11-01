@@ -14,13 +14,13 @@ builds:
     goarm:
       - "6"
       - "7"
-    ldflags:
+    ldflags: 
       - -extldflags "-static"
       - -s
       - -w
-      - -X github.com/lab42/{{ .ProjectName }}/cmd.Version={{ .Version }}
-      - -X github.com/lab42/{{ .ProjectName }}/cmd.Commit={{ .FullCommit }}
-      - -X github.com/lab42/{{ .ProjectName }}/cmd.Date={{ .Date }}
+      - -X gihub.com/lab42/ccu/cmd.Version={{ .Version }}  
+      - -X gihub.com/lab42/ccu/cmd.Commit={{ .FullCommit }}  
+      - -X gihub.com/lab42/ccu/cmd.Date={{ .Date }}
 checksum:
   name_template: "checksums.txt"
 dockers:
@@ -87,10 +87,8 @@ docker_manifests:
       - ghcr.io/lab42/{{.ProjectName}}:latest-arm64v8
       - ghcr.io/lab42/{{.ProjectName}}:latest-armv6
       - ghcr.io/lab42/{{.ProjectName}}:latest-armv7
-# SBOM
 sboms:
   - artifacts: archive
-# Signing
 signs:
   - cmd: cosign
     stdin: ""
