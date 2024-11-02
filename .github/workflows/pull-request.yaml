@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "[CI] PR Title"
-        uses: lab42/ccu-action@v0.1.6
+        uses: lab42/ccu-action@v0.1.7
         with:
           pr_title: ${{ github.event.pull_request.title }}
   validate-dockerfile:
