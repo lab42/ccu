@@ -1,15 +1,16 @@
 ![Conventional Commit Util](img/banner.svg)
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/tag/lab42/ccu?label=latest%20tag" alt="Latest Tag" />
-  <img src="https://github.com/lab42/ccu/actions/workflows/tag.yaml/badge.svg?event=push" alt="Build Status" />
-  <img src="https://github.com/lab42/ccu/actions/workflows/main.yaml/badge.svg?branch=main&job=analyze" alt="CodeQL" />
-  <img src="https://img.shields.io/github/go-mod/go-version/lab42/ccu" alt="Go Version" />
-  <img src="https://img.shields.io/github/license/lab42/ccu" alt="License" />
+  <img src="https://img.shields.io/github/v/tag/lab42/ccu?label=latest%20tag" alt="Latest Tag" height="30" />
+  <img src="https://github.com/lab42/ccu/actions/workflows/tag.yaml/badge.svg?event=push" alt="Build Status" height="30" />
+  <img src="https://github.com/lab42/ccu/actions/workflows/main.yaml/badge.svg?branch=main&job=analyze" alt="CodeQL" height="30" />
+  <img src="https://img.shields.io/github/go-mod/go-version/lab42/ccu" alt="Go Version" height="30" />
+  <img src="https://img.shields.io/github/license/lab42/ccu" alt="License" height="30" />
   <a href="https://goreportcard.com/report/github.com/lab42/ccu">
-    <img src="https://goreportcard.com/badge/github.com/lab42/ccu" alt="Go Report Card" />
+    <img src="https://goreportcard.com/badge/github.com/lab42/ccu" alt="Go Report Card" height="30" />
   </a>
 </p>
+
 
 `ccu` is a tool for enforcing structured and compliant commit messages in Git repositories. It supports both command-line arguments and a YAML configuration file for flexibility, and can be easily integrated into CI/CD pipelines like GitHub Actions, GitLab CI, and Drone.
 
