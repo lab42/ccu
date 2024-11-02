@@ -5,6 +5,7 @@
 ![CodeQL](https://github.com/lab42/ccu/actions/workflows/main.yaml/badge.svg?branch=main&job=analyze)
 ![Go Version](https://img.shields.io/github/go-mod/go-version/lab42/ccu)
 ![License](https://img.shields.io/github/license/lab42/ccu)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lab42/ccu)](https://goreportcard.com/report/github.com/lab42/ccu)
 
 `ccu` is a tool for enforcing structured and compliant commit messages in Git repositories. It supports both command-line arguments and a YAML configuration file for flexibility, and can be easily integrated into CI/CD pipelines like GitHub Actions, GitLab CI, and Drone.
 
