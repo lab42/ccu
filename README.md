@@ -8,17 +8,17 @@
 
 `ccu` is a tool for enforcing structured and compliant commit messages in Git repositories. It supports both command-line arguments and a YAML configuration file for flexibility, and can be easily integrated into CI/CD pipelines like GitHub Actions, GitLab CI, and Drone.
 
-## Installation
+<h2>Installation</h2>
 
 You can install `ccu` by downloading and running the `install.sh` script hosted in this repository. Choose either `curl` or `wget` based on your preference:
 
-### Install with `curl`
+<h3 align="center">Install with `curl`</h3>
 rgb(240, 246, 252)
 ```sh
 curl -fsSL https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
 ```
 
-### Install with `wget`
+<h3 align="center">Install with `wget`</h3>
 
 ```sh
 wget -qO- https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
@@ -26,7 +26,7 @@ wget -qO- https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh
 
 The installation script automatically detects your OS and architecture, downloads the latest release of `ccu`, and places it in `/usr/local/bin`.
 
-### Install with Go
+<h3 align="center">Install with Go</h3>
 
 If you have Go installed, you can install the latest version of `ccu` directly:
 
@@ -34,7 +34,7 @@ If you have Go installed, you can install the latest version of `ccu` directly:
 go install github.com/lab42/ccu@latest
 ```
 
-### Run via Docker
+<h3 align="center">Run via Docker</h3>
 
 `ccu` is also available as a Docker image:
 
@@ -48,7 +48,7 @@ Run `ccu` with Docker:
 docker run --rm ghcr.io/lab42/ccu:latest [command] [options]
 ```
 
-## Configuration Options
+<h2>Configuration Options</h2>
 
 `ccu` can be configured using command-line arguments, environment variables, or a YAML configuration file. The following options are available:
 
@@ -58,7 +58,7 @@ docker run --rm ghcr.io/lab42/ccu:latest [command] [options]
 - `--input` / `CCU_INPUT`: The commit message to validate
 - `--config`: Path to config file (default: `$HOME/.ccu.yaml`)
 
-### Example YAML Configuration File
+<h3 align="center">Example YAML Configuration File</h3>
 
 You can also use a YAML configuration file to specify options. Here's an example:
 
@@ -75,17 +75,17 @@ The config file will be automatically loaded from your home directory if named `
 ccu --config path/to/config.yaml
 ```
 
-## Usage
+<h2>Usage</h2>
 
 After installation, you can use `ccu` to validate commit messages in various ways.
 
-### Basic Command-Line Usage
+<h3 align="center">Basic Command-Line Usage</h3>
 
 ```sh
 ccu --input "feat(auth): add OAuth2 support"
 ```
 
-### Using Environment Variables
+<h3 align="center">Using Environment Variables</h3>
 
 Set the configuration via environment variables:
 
@@ -97,9 +97,9 @@ export CCU_INPUT="feat(auth): add OAuth2 support"
 ccu
 ```
 
-## CI Integration
+<h2>CI Integration</h2>
 
-### GitHub Actions
+<h3 align="center">GitHub Actions</h3>
 
 To integrate `ccu` with GitHub Actions, add a step in your workflow that validates the latest commit message. Here's an example workflow configuration:
 
@@ -131,7 +131,7 @@ jobs:
           ccu
 ```
 
-### GitLab CI
+<h3 align="center">GitLab CI</h3>
 
 For GitLab CI integration, add a job to your `.gitlab-ci.yml` file:
 
@@ -150,16 +150,16 @@ CCU:
     - merge_requests
 ```
 
-## Note on Windows Support
+<h2>Note on Windows Support</h2>
 
 Please be aware that I do not use Windows as part of my workflow. As a result, I cannot provide support for Windows-related issues or configurations. However, I do generate Windows executables as a courtesy for those who need them.
 
 Thank you for your understanding!
 
-## Contributing
+<h2>Contributing</h2>
 
 I welcome contributions to this project! If you have ideas for new features or improvements, please submit a feature request or contribute directly to the project.
 
-## License
+<h2>License</h2>
 
 This project is licensed under the [MIT License](LICENSE).
