@@ -8,7 +8,7 @@
 
 `ccu` is a tool for enforcing structured and compliant commit messages in Git repositories. It supports both command-line arguments and a YAML configuration file for flexibility, and can be easily integrated into CI/CD pipelines like GitHub Actions, GitLab CI, and Drone.
 
-<h2>Installation</h2>
+<h2 align="center">Installation</h2>
 
 You can install `ccu` by downloading and running the `install.sh` script hosted in this repository. Choose either `curl` or `wget` based on your preference:
 
@@ -48,7 +48,7 @@ Run `ccu` with Docker:
 docker run --rm ghcr.io/lab42/ccu:latest [command] [options]
 ```
 
-<h2>Configuration Options</h2>
+<h2 align="center">Configuration Options</h2>
 
 `ccu` can be configured using command-line arguments, environment variables, or a YAML configuration file. The following options are available:
 
@@ -75,7 +75,7 @@ The config file will be automatically loaded from your home directory if named `
 ccu --config path/to/config.yaml
 ```
 
-<h2>Usage</h2>
+<h2 align="center">Usage</h2>
 
 After installation, you can use `ccu` to validate commit messages in various ways.
 
@@ -97,7 +97,7 @@ export CCU_INPUT="feat(auth): add OAuth2 support"
 ccu
 ```
 
-<h2>CI Integration</h2>
+<h2 align="center">CI Integration</h2>
 
 <h3 align="center">GitHub Actions</h3>
 
@@ -150,16 +150,16 @@ CCU:
     - merge_requests
 ```
 
-<h2>Note on Windows Support</h2>
+<h2 align="center">Note on Windows Support</h2>
 
 Please be aware that I do not use Windows as part of my workflow. As a result, I cannot provide support for Windows-related issues or configurations. However, I do generate Windows executables as a courtesy for those who need them.
 
 Thank you for your understanding!
 
-<h2>Contributing</h2>
+<h2 align="center">Contributing</h2>
 
 I welcome contributions to this project! If you have ideas for new features or improvements, please submit a feature request or contribute directly to the project.
 
-<h2>License</h2>
+<h2 align="center">License</h2>
 
 This project is licensed under the [MIT License](LICENSE).
