@@ -1,5 +1,10 @@
 ![Conventional Commit Util](img/banner.svg)
 
+![Latest Tag](https://img.shields.io/github/v/tag/lab42/ccu?label=latest%20tag)
+![Build Status](https://github.com/lab42/ccu/actions/workflows/tag.yaml/badge.svg?event=push)
+![CodeQL](https://github.com/lab42/ccu/actions/workflows/main.yaml/badge.svg?branch=main&job=analyze)
+![Go Version](https://img.shields.io/github/go-mod/go-version/lab42/ccu)
+![License](https://img.shields.io/github/license/lab42/ccu)
 
 `ccu` is a tool for enforcing structured and compliant commit messages in Git repositories. It supports both command-line arguments and a YAML configuration file for flexibility, and can be easily integrated into CI/CD pipelines like GitHub Actions, GitLab CI, and Drone.
 
@@ -8,7 +13,7 @@
 You can install `ccu` by downloading and running the `install.sh` script hosted in this repository. Choose either `curl` or `wget` based on your preference:
 
 ### Install with `curl`
-
+rgb(240, 246, 252)
 ```sh
 curl -fsSL https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
 ```
