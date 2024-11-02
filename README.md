@@ -13,7 +13,7 @@
 You can install `ccu` by downloading and running the `install.sh` script hosted in this repository. Choose either `curl` or `wget` based on your preference:
 
 <h3 align="center">Install with `curl`</h3>
-rgb(240, 246, 252)
+
 ```sh
 curl -fsSL https://raw.githubusercontent.com/lab42/ccu/refs/heads/main/install.sh | sh
 ```
