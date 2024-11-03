@@ -21,24 +21,40 @@
     </style>
 
 
-    <g transform="translate(427, 125) scale(1, 1) translate(-427, -125)">
+    <!-- Top waves (inverted) -->
+    <g transform="translate(427, 125) scale(1, -1) translate(-427, -125)">
         <path d="" fill="#3182ce" opacity="0.4">
             <animate attributeName="d" dur="20s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
                 calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="0s"
                 values="M0 0L 0 170Q 213.5 210 427 180T 854 205L 854 0 Z;M0 0L 0 195Q 213.5 210 427 190T 854 180L 854 0 Z;M0 0L 0 215Q 213.5 185 427 215T 854 180L 854 0 Z;M0 0L 0 170Q 213.5 210 427 180T 854 205L 854 0 Z">
-</animate>
+            </animate>
         </path>
         <path d="" fill="#3182ce" opacity="0.4">
             <animate attributeName="d" dur="20s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
                 calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-10s"
                 values="M0 0L 0 185Q 213.5 230 427 200T 854 210L 854 0 Z;M0 0L 0 200Q 213.5 170 427 170T 854 190L 854 0 Z;M0 0L 0 195Q 213.5 175 427 200T 854 215L 854 0 Z;M0 0L 0 185Q 213.5 230 427 200T 854 210L 854 0 Z">
-</animate>
+            </animate>
         </path>
     </g>
 
+    <!-- Bottom waves (original) -->
+    <g transform="translate(427, 125) scale(1, 1) translate(-427, -125)">
+        <path d="" fill="#3182ce" opacity="0.4">
+            <animate attributeName="d" dur="20s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
+                calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="0s"
+                values="M0 0L 0 170Q 213.5 210 427 180T 854 205L 854 0 Z;M0 0L 0 195Q 213.5 210 427 190T 854 180L 854 0 Z;M0 0L 0 215Q 213.5 185 427 215T 854 180L 854 0 Z;M0 0L 0 170Q 213.5 210 427 180T 854 205L 854 0 Z">
+            </animate>
+        </path>
+        <path d="" fill="#3182ce" opacity="0.4">
+            <animate attributeName="d" dur="20s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1"
+                calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-10s"
+                values="M0 0L 0 185Q 213.5 230 427 200T 854 210L 854 0 Z;M0 0L 0 200Q 213.5 170 427 170T 854 190L 854 0 Z;M0 0L 0 195Q 213.5 175 427 200T 854 215L 854 0 Z;M0 0L 0 185Q 213.5 230 427 200T 854 210L 854 0 Z">
+            </animate>
+        </path>
+    </g>
 
-    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="35%" class="text"
+    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="40%" class="text"
         style="fill:#F0F6FC;" stroke="#none" stroke-width="1">Conventional Commit Util</text>
-    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="55%" class="desc"
+    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="60%" class="desc"
         style="fill:#F0F6FC;">No request left behind</text>
 </svg>
