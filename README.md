@@ -10,6 +10,8 @@
   </a>
 </p>
 
+<br/>
+
 - [Overview](#overview)
 - [Installation](#installation)
   - [Install with curl](#install-with-curl)
@@ -29,7 +31,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 
----
+<br/>
 
 <h2 align="center">Overview</h2>
 
