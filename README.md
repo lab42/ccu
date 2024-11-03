@@ -1,13 +1,12 @@
 ![Conventional Commit Util](img/banner.svg)
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/tag/lab42/ccu?label=latest%20tag" alt="Latest Tag" height="25" />
-  <img src="https://github.com/lab42/ccu/actions/workflows/tag.yaml/badge.svg?event=push" alt="Build Status" height="25" />
-  <img src="https://github.com/lab42/ccu/actions/workflows/main.yaml/badge.svg?branch=main&job=analyze" alt="CodeQL" height="25" />
-  <img src="https://img.shields.io/github/go-mod/go-version/lab42/ccu" alt="Go Version" height="25" />
-  <img src="https://img.shields.io/github/license/lab42/ccu" alt="License" height="25" />
+  <img src="https://img.shields.io/github/v/tag/lab42/ccu?label=latest%20tag&style=flat-square" alt="Latest Tag" height="30" />
+  <img src="https://img.shields.io/github/actions/workflow/status/lab42/ccu/tag.yaml?style=flat-square" alt="Build Status" height="30" />
+  <img src="https://img.shields.io/github/go-mod/go-version/lab42/ccu?style=flat-square" alt="Go Version" height="30" />
+  <img src="https://img.shields.io/github/license/lab42/ccu?style=flat-square" alt="License" height="30" />
   <a href="https://goreportcard.com/report/github.com/lab42/ccu">
-    <img src="https://goreportcard.com/badge/github.com/lab42/ccu" alt="Go Report Card" height="25" />
+    <img src="https://goreportcard.com/badge/github.com/lab42/ccu?style=flat-square" alt="Go Report Card" height="30" />
   </a>
 </p>
 
