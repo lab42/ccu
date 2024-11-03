@@ -1,4 +1,4 @@
-![Conventional Commit Util](img/banner.svg)
+![Conventional Commit Util](assets/banner.svg)
 
 <p align="center">
   <img src="https://img.shields.io/github/v/tag/lab42/ccu?label=latest%20tag&style=flat-square" alt="Latest Tag" height="30" />
@@ -10,7 +10,28 @@
   </a>
 </p>
 
-<br/>
+- [Overview](#overview)
+- [Installation](#installation)
+  - [Install with curl](#install-with-curl)
+  - [Install with wget](#install-with-wget)
+  - [Install with Go](#install-with-go)
+  - [Run via Docker](#run-via-docker)
+- [Configuration Options](#configuration-options)
+  - [Example YAML Configuration File](#example-yaml-configuration-file)
+- [Usage](#usage)
+  - [Basic Command-Line Usage](#basic-command-line-usage)
+  - [Using Environment Variables](#using-environment-variables)
+- [CI Integration](#ci-integration)
+  - [GitHub Actions](#github-actions)
+  - [GitLab CI](#gitlab-ci)
+- [Contributors](#contributors)
+- [Note on Windows Support](#note-on-windows-support)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+<h2 align="center">Overview</h2>
 
 `ccu` is a tool for enforcing structured and compliant commit messages in Git repositories. It supports both command-line arguments and a YAML configuration file for flexibility, and can be easily integrated into CI/CD pipelines like GitHub Actions, GitLab CI, and Drone.
 
@@ -109,6 +130,16 @@ ccu
 
 To integrate `ccu` with GitHub Actions, add a step in your workflow that validates the latest commit message. Here's an example workflow configuration:
 
+Github Action:
+```yaml
+- name: "[CI] PR Title"
+  uses: lab42/ccu-action@v0.1.7
+  with:
+    pr_title: ${{ github.event.pull_request.title }}
+```
+
+Manual:
+
 ```yaml
 name: ccu
 
@@ -155,6 +186,12 @@ CCU:
   only:
     - merge_requests
 ```
+
+<h2 align="center">Contributors</h2>
+
+<a href="https://github.com/lab42/ccu/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=lab42/ccu" />
+</a>
 
 <h2 align="center">Note on Windows Support</h2>
 
