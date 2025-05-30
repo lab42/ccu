@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3.22
 
 RUN addgroup --gid 10000 -S appgroup && \
     adduser --uid 10000 -S appuser -G appgroup
